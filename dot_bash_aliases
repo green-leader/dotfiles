@@ -1,0 +1,5 @@
+# make temp directory and change to it
+alias ctemp='cd $(mktemp -d)'
+
+# rise or run functionality for tmux
+alias rrmux="tmux attach-session || tmux"
