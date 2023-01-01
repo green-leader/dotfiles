@@ -3,3 +3,6 @@ alias ctemp='cd $(mktemp -d)'
 
 # rise or run functionality for tmux
 alias rrmux="tmux attach-session || tmux"
+
+# run hugo without needed to actually install it
+alias hugo="docker run --rm -it -v $(pwd):/src --user $UID:$UID klakegg/hugo:0.107.0"
