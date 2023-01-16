@@ -1,0 +1,5 @@
+[user]
+	email = github@sions.org
+	name = Sion Fandrick
+[push]
+	autoSetupRemote = true
