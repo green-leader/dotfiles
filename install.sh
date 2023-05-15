@@ -4,6 +4,11 @@
 # -u: exit on unset variables
 set -eu
 
+if [[ -n "${CODESPACES+x}" ]]; then
+wget -O /home/codespace/.local/bin/git-sync https://gist.githubusercontent.com/green-leader/862d0ccfc5cf82fc650da54fe14d5ff5/raw/ef709d69cdfdc1a1142a30730baa2bb6b52b17fe/sync.sh
+chmod +x /home/codespace/.local/bin/git-sync
+fi
+
 if ! chezmoi="$(command -v chezmoi)"; then
   bin_dir="${HOME}/.local/bin"
   chezmoi="${bin_dir}/chezmoi"
