@@ -22,3 +22,4 @@ manage () {
 }
 
 manage git-sync.sh https://gist.githubusercontent.com/green-leader/862d0ccfc5cf82fc650da54fe14d5ff5/raw/sync.sh
+manage tailproxy.sh https://gist.githubusercontent.com/green-leader/76cc65df718342967f3d06592525508a/raw/tailproxy.sh
