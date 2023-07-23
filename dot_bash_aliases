@@ -5,7 +5,7 @@ alias ctemp='cd $(mktemp -d)'
 alias rrmux='tmux attach-session || tmux'
 
 # run hugo without needed to actually install it
-alias hugo='docker run --rm -it -v $(pwd):/src --user $UID:$UID -p 1313:1313 klakegg/hugo:0.107.0'
+alias hugo='docker run --rm -it -v $(pwd):/src --user "$UID:$UID" -p "1313:1313" klakegg/hugo:0.107.0'
 
 # docker-compose utilites easier to use on mobile
 alias dcup='docker-compose up -d'
