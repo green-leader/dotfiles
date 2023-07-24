@@ -7,6 +7,9 @@ alias rrmux='tmux attach-session || tmux'
 # run hugo without needed to actually install it
 alias hugo='docker run --rm -it -v "$(pwd):/src" --user "$UID:$UID" -p "1313:1313" klakegg/hugo:0.107.0'
 
+# run a super linter. If there's a filename appended we want to output to a file
+alias superlint='docker run --rm -e RUN_LOCAL=true -e USE_FIND_ALGORITHM=true -v "$(pwd):/tmp/lint" ghcr.io/super-linter/super-linter:slim-v5 2>&1 | tee '
+
 # docker-compose utilites easier to use on mobile
 alias dcup='docker-compose up -d'
 alias dcdown='docker-compose down'
