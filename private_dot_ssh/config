@@ -1,0 +1,18 @@
+Host *
+	IdentitiesOnly yes
+
+Host *.int.sions.org
+	ProxyCommand tailproxy.sh %h %p .int.sions.org 
+	IdentityFile ~/.ssh/id_ed25519
+
+Host obsidian-github
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_obsidian
+
+Host borg-unraid
+	User borg
+	HostName storage01.int.sions.org
+	Port 2022
+	IdentityFile ~/.ssh/id_ed25519
+
