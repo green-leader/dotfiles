@@ -8,6 +8,12 @@ alias rrmux='tmux attach-session || tmux'
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 # wsl will need to have hugo installed
 # hugo server needs extra work as well?
+# hugo server needs extra specifications. use the installed hugo binary otherwise
+hugo-serve() {
+local ADDR
+ADDR=$(ip a show dev eth0 | grep "inet\b" | awk '{print $2}' | awk -F '/' '{print$1}')
+hugo server --bind "$ADDR" --baseURL "http://$ADDR"
+}
 {{   else }}
 # run hugo without needed to actually install it
 alias hugo='docker run --rm -it -v "$(pwd):/src" --user "$UID:$UID" -p "1313:1313" klakegg/hugo:0.107.0'
