@@ -4,8 +4,15 @@ alias ctemp='cd $(mktemp -d)'
 # rise or run functionality for tmux
 alias rrmux='tmux attach-session || tmux'
 
+{{ if eq .chezmoi.os "linux" }}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+# wsl will need to have hugo installed
+# hugo server needs extra work as well?
+{{   else }}
 # run hugo without needed to actually install it
 alias hugo='docker run --rm -it -v "$(pwd):/src" --user "$UID:$UID" -p "1313:1313" klakegg/hugo:0.107.0'
+{{   end }}
+{{ end }}
 
 # run a super linter. If there's a filename appended we want to output to a file
 alias superlint='docker run --rm -e RUN_LOCAL=true -e USE_FIND_ALGORITHM=true -v "$(pwd):/tmp/lint" ghcr.io/super-linter/super-linter:slim-v5 2>&1 | tee '
@@ -14,3 +21,5 @@ alias superlint='docker run --rm -e RUN_LOCAL=true -e USE_FIND_ALGORITHM=true -v
 alias dcup='docker-compose up -d'
 alias dcdown='docker-compose down'
 
+# simplify running a git-sync
+alias kb-sync='bash ~/bin/git-sync.sh ~sion/Documents/kb-obsidian'
