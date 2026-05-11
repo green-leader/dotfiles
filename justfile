@@ -57,6 +57,7 @@ cm-managed:
 
 cm-edit file:
   chezmoi edit {{file}}
+  chezmoi apply
 
 cm-update:
   chezmoi update -v
