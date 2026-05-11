@@ -61,5 +61,8 @@ cm-edit file:
 cm-apply:
   chezmoi apply -v
 
+cm-setup:
+  chezmoi init git@github.com:green-leader/dotfiles.git
+
 sync: sync-kb cm-apply
   echo "kb and chezmoi sync"
