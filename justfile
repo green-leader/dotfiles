@@ -62,4 +62,4 @@ cm-apply:
   chezmoi apply -v
 
 sync: sync-kb cm-apply
-  echo "justfile sync"
+  echo "kb and chezmoi sync"
