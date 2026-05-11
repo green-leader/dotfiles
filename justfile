@@ -67,3 +67,4 @@ cm-setup:
 
 sync: sync-kb cm-update
   echo "kb and chezmoi sync"
+
