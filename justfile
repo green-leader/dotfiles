@@ -58,11 +58,11 @@ cm-managed:
 cm-edit file:
   chezmoi edit {{file}}
 
-cm-apply:
-  chezmoi apply -v
+cm-update:
+  chezmoi update -v
 
 cm-setup:
   chezmoi init git@github.com:green-leader/dotfiles.git
 
-sync: sync-kb cm-apply
+sync: sync-kb cm-update
   echo "kb and chezmoi sync"
