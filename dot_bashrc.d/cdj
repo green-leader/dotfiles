@@ -1,0 +1,5 @@
+cdj() {
+    pushd ~/Documents/*/*/${1}*
+}
+
+export cdj
