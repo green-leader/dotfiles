@@ -1,0 +1,5 @@
+Include ~/.ssh/config.d/*
+
+Host *
+  IdentitiesOnly yes
+
