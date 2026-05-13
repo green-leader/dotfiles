@@ -1,5 +1,5 @@
 cdj() {
-    pushd "$HOME/Documents/*/*/${1}*" || return
+    pushd ~/Documents/*/*/${1}* || return
 }
 
 export cdj
