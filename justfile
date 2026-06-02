@@ -63,6 +63,7 @@ cm-update:
   chezmoi update -v
 
 cm-setup:
+  brew install chezmoi
   chezmoi init git@github.com:green-leader/dotfiles.git
 
 sync: sync-kb cm-update
