@@ -50,12 +50,14 @@ install-syncthing:
   systemctl --user daemon-reload
   echo 'Hello World'
 
+[doc('track a file with chezmoi')]
 cm-add file:
   chezmoi add {{file}}
 
 cm-managed:
   chezmoi managed
 
+[doc('edit a file already tracked and managed by chezmoi')]
 cm-edit file:
   chezmoi edit {{file}}
   chezmoi apply
@@ -63,10 +65,12 @@ cm-edit file:
 cm-update:
   chezmoi update -v
 
+[doc('onboard device with chezmoi')]
 cm-setup:
   brew install chezmoi
   chezmoi init git@github.com:green-leader/dotfiles.git
 
+[doc('sync knowledgebase and chezmoi')]
 sync: sync-kb cm-update
   echo "kb and chezmoi sync"
 
