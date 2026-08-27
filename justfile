@@ -54,6 +54,7 @@ install-syncthing:
 cm-add file:
   chezmoi add {{file}}
 
+[doc('show files tracked by chezmoi')]
 cm-managed:
   chezmoi managed
 
@@ -74,6 +75,7 @@ cm-setup:
 sync: sync-kb cm-update
   echo "kb and chezmoi sync"
 
+[doc('search and kill all the processes matching the argument')]
 killall process:
   kill $(ps aux | grep {{process}} | awk '{print $2}')
 
