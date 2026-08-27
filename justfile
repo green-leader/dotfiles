@@ -11,6 +11,7 @@ another-recipe:
   @echo 'This is another recipe.'
 
 [working-directory: 'Documents/kb-obsidian']
+[doc('sync the obsidian vault')]
 sync-kb:
   git add .
   git commit -m "$(date +%Y-%m-%dT%H:%M:%S%z)" || true
