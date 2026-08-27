@@ -69,3 +69,6 @@ cm-setup:
 sync: sync-kb cm-update
   echo "kb and chezmoi sync"
 
+killall process:
+  kill $(ps aux | grep {{process}} | awk '{print $2}')
+
