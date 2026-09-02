@@ -81,4 +81,4 @@ killall process:
 
 [doc('run the restic command to run a backup creating a new snapshot')]
 backup:
-  restic -r rest:http://cliff.sions.org:8000/ backup ~/ --exclude ~/.cache --exclude-caches -x
+  restic -r rest:http://cliff.sions.org:8000/ backup ~/ --exclude ~/.cache --exclude-caches -x --exclude Cache --exclude cache --exclude _cacache
