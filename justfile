@@ -79,3 +79,6 @@ sync: sync-kb cm-update
 killall process:
   kill $(ps aux | grep {{process}} | awk '{print $2}')
 
+[doc('run the restic command to run a backup creating a new snapshot')]
+backup:
+  restic -r rest:http://cliff.sions.org:8000/ backup ~/ --exclude ~/.cache --exclude-caches -x
