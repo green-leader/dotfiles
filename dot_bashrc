@@ -27,3 +27,6 @@ unset rc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 EDITOR=$(which nvim)
+
+# ignore duplicates and lines that start with spaces
+HISTCONTROL=ignoreboth
