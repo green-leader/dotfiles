@@ -77,7 +77,7 @@ sync: sync-kb cm-update
 
 [doc('search and kill all the processes matching the argument')]
 killall process:
-  kill $(ps aux | grep {{process}} | awk '{print $2}')
+  kill $(ps aux | grep {{process}} | grep -v grep | awk '{print $2}')
 
 [doc('run the restic command to run a backup creating a new snapshot')]
 backup:
