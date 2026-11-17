@@ -89,3 +89,4 @@ llm-serve:
 
 pi-agent:
   tmux new-window -t llm-session "distrobox enter pi-agent -- pi"
+  tmux a -t llm-session
