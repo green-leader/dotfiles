@@ -82,3 +82,7 @@ killall process:
 [doc('run the restic command to run a backup creating a new snapshot')]
 backup:
   restic -r rest:http://cliff.sions.org:8000/ backup ~/ --exclude ~/.cache --exclude-caches -x --exclude Cache --exclude cache --exclude _cacache
+
+[doc('start llama.cpp server for local coding agent to connect to')]
+llm-serve:
+  llama serve   --no-models-autoload   --host 127.0.0.1 --no-mmproj -c 32768
