@@ -86,3 +86,6 @@ backup:
 [doc('start llama.cpp server for local coding agent to connect to')]
 llm-serve:
   llama serve   --no-models-autoload   --host 127.0.0.1 --no-mmproj -c 32768
+
+pi-agent:
+  distrobox enter pi-agent -- pi
