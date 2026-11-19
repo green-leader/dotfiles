@@ -85,7 +85,7 @@ backup:
 
 [doc('start llama.cpp server for local coding agent to connect to')]
 llm-serve:
-  tmux new-session -d -s llm-session "llama serve   --no-models-autoload   --host 127.0.0.1 --no-mmproj -c 32768 -t 4;"
+  tmux new-session -d -s llm-session "llama serve   --no-models-autoload   --host 127.0.0.1 --no-mmproj -c 32768 -t 4 -np 1;"
 
 pi-agent:
   tmux new-window -t llm-session "distrobox enter pi-agent -- pi"
